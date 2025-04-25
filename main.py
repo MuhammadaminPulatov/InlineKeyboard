@@ -43,7 +43,7 @@ async def reply_handler(message: Message):
 
 @dp.callback_query(F.data.in_(["products", "electronics", "clother", "basket"]))
 async def inline_handler(callback: CallbackQuery):
-    await callback.answer()  # yuklanishni yopadi
+    await callback.answer()
     await callback.message.answer(f"{callback.data}")
 
 async def main():
